@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Cat</title>
+    <title>Model Orange</title>
     <style>
         body {
             display: flex;
@@ -26,7 +26,7 @@
             margin-bottom: 20px;
         }
 
-        video {
+        iframe {
             width: 100%;
             height: 100%;
         }
@@ -35,16 +35,15 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 30px; 
             font-size: 18px; 
-            text-align: center;
-            box-sizing: border-box; 
+            text-align: left;
+            box-sizing: border-box;
+            width: 90vw; 
+            max-width: 700px;
+            border-radius: 8px;
         }
 
         .back-btn {
@@ -64,28 +63,26 @@
     </style>
 </head>
 <body>
-    <a href="Animal.html" class="back-btn">กลับหน้าก่อนหน้า</a>
-    <h1>Model Cat</h1>
-    <div class="video-container" >
-        <video controls id="Vdocat">
-            <source src="vdo/Game.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>        
+    <a href="Fruit.html" class="back-btn">กลับหน้าก่อนหน้า</a>
+    <h1>Model Orange</h1>
+    <div class="video-container">
+        <iframe id="VdoOrange" src="https://www.youtube.com/embed/Z78lzQUfPb0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="overlay">
-        <p>Model Cat</p>
-        <p>มีการใช้คำสั่ง cut</p>
-        <p>เครื่องมือที่ใช้<br>ไม่มี
+        <p>Model Orange</p>
+        <p>เครื่องมือที่ใช้<br>1. Subdividion Surface <br>2.Proportonal Editing</p>
+        <p>คำสั่งที่ใช้<br>1. Shade Smooth</p>
+        <p>ปุ่มที่ใช้<br>1. Tab<br>2. G<br>3. Z<br>4. Shift<br>5. S<br>6. 1<br>7. E<br>8. F</p>
+        <p>Timestamp</p>
         <div class="texttime">
-            <p onclick="StartFromSecond(10)">11:20 ช่อง1</p>
+            <p onclick="StartFromSecond(10)">0:00:10 ขั้นตอนที่1 ตัวส้ม <span style="color:blue; "> <= ตรงนี้กดได้</span></p>
+            <p onclick="StartFromSecond(249)">0:04:09 ขั้นตอนที่2 ก้าน <span style="color:blue; "> <= ตรงนี้กดได้</span></p>          
         </div>
     </div>
     <script>
-    var video = document.getElementById("Vdocat");
-
     function StartFromSecond(seconda) {
-        video.currentTime = seconda;
-        video.play();
+        var iframe = document.getElementById("VdoOrange");
+        iframe.src = "https://www.youtube.com/embed/Z78lzQUfPb0?start=" + seconda + "&autoplay=1";
     }
     </script>
 </body>
