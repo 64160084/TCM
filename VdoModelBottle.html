@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Bottle</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 90vw; 
+            max-width: 700px; 
+            height: 50vh; 
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 30px; 
+            font-size: 18px; 
+            text-align: left;
+            box-sizing: border-box;
+            width: 90vw; 
+            max-width: 700px;
+            border-radius: 8px;
+        }
+
+        .back-btn {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .texttime {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="Bottle.html" class="back-btn">กลับหน้าก่อนหน้า</a>
+    <h1>Model Bottle</h1>
+    <div class="video-container">
+        <iframe id="VdoBottle" src="https://www.youtube.com/embed/AhrdRLra2zc" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="overlay">
+        <p>Model Bottle</p>
+        <p>เครื่องมือที่ใช้<br>1. Subdividion Surface <br>2.Toggle X-Ray <br>3.Add Cylinder</p>
+        <p>คำสั่งที่ใช้<br>1. Shade Smooth <br>2.Loop Cup <br>3.Dissolve Edges</p>
+        <p>ปุ่มที่ใช้<br>1. Tab<br>2. Ctrl<br>3. R<br>4. Delete<br>5. S<br>6. E<br>7. S<br>8. 1</p>
+        <p>Timestamp</p>
+        <div class="texttime">
+            <p onclick="StartFromSecond(8)">0:00:8 ขั้นตอนที่1 ขึ้นรูปขวด <span style="color:blue; "> <= ตรงนี้กดได้</span></p>
+            <p onclick="StartFromSecond(105)">0:01:45 ขั้นตอนที่2 ฐานของขวด <span style="color:blue; "> <= ตรงนี้กดได้</span></p>   
+            <p onclick="StartFromSecond(150)">0:02:30 ขั้นตอนที่2 ส่วนบนขวด <span style="color:blue; "> <= ตรงนี้กดได้</span></p>
+            <p onclick="StartFromSecond(210)">0:03:30 ขั้นตอนที่2 ฝาขวด <span style="color:blue; "> <= ตรงนี้กดได้</span></p>       
+        </div>
+    </div>
+    <script>
+    function StartFromSecond(seconda) {
+        var iframe = document.getElementById("VdoBottle");
+        iframe.src = "https://www.youtube.com/embed/AhrdRLra2zc?start=" + seconda + "&autoplay=1";
+    }
+    </script>
+</body>
+</html>
